@@ -1,0 +1,10 @@
+<div *ngIf="imageSrc && imageName" class="card" style="width: 18rem;">
+  <img class="img-fluid"
+       [src]="imageSrc"
+    alt="Image"
+    class="card-img-top"/>
+  <div class="card-body">
+    <p class="card-text">{{imageName}}</p>
+    <ng-content></ng-content>
+  </div>
+</div>

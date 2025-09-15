@@ -1,0 +1,14 @@
+<div class="container">
+  <form (submit)="submit()">
+    <div class="mb-3">
+      <label for="image" class="form-label">Image</label>
+      <input class="form-control" id="image" type="file"  accept="image/png, image/jpeg" (change)="update($event)"  />
+    </div>
+    <div class="mb-3">
+      <label for="messageArea" class="form-label">Message</label>
+      <textarea class="form-control" id="messageArea" rows="3" name="message" [(ngModel)]="message"></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-primary" >Submit</button>
+  </form>
+</div>

@@ -1,0 +1,12 @@
+<div class="container">
+  <div *ngIf="images && images.length" class="row justify-content-center gx-2 column-gap-0">
+    <div class="col" style="width: 19rem" *ngFor="let image of images" >
+      <app-image-card [imageSrc]="image.imageUrl"
+                      [imageName]="image.name"
+                      [id]="image.id">
+        <button role="button" class="btn btn-primary" (click)="reveal(image.id)">Decode</button>
+      </app-image-card>
+    </div>
+  </div>
+</div>
+

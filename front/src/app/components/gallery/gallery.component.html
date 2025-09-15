@@ -1,0 +1,10 @@
+<div class="container">
+ <div class="row justify-content-center gx-2 column-gap-0">
+   <div class="col-3"  style="width: 19rem" *ngFor="let image of images.hits">
+     {{images.largeImageURL}}
+     <app-image-card [imageSrc]="image.largeImageURL" [imageName]="image.tags.split(',')[0]">
+       <button *ngIf="(authService.isLoggedIn$|async)" role="button" class="btn btn-primary" (click)="encrypt(image)">Encode</button>
+     </app-image-card>
+   </div>
+ </div>
+</div>
